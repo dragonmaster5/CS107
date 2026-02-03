@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyCompSciPortfolio</title>
+</head>
+<body>
+<h1>CSCI 107 - <i>My CS Portfoilio</i></h1>
+<p>I want to use this&nbsp;website&nbsp;to&nbsp;illustrate&nbsp;many of the personal projects I've created over my time in Lake Forest. <b>
+    These are things that are currently buried in my private github, and I would like to be able to show them to possible employers.</b>
+
+</p>
+
+<hr>
+<p>
+    These programs include many <mark>cryptographic encoders and decoders</mark> functions, and some home made tools for <mark> statistical analyisis</mark>.
+</p>
+<h2>Examples- <small><i>Some code bites may not function.</i></small></h2>
+ <!-- make these pretty later-->
+<code>
+    <pre>
+    import java.util.Arrays;
+
+    public class HillCipher extends Cipher {
+    String plainText="";
+    String cipherText="";
+    String key;
+    Matrix cipherMatrix;
+    Matrix keyMatrix;
+
+    boolean hasKey;
+
+
+
+    public HillCipher(String plainText, String key)
+    {
+    this.plainText=clean(plainText);
+    while(this.plainText.length()%3!=0)
+    {   int rand = (int)(Math.random()*26);
+    this.plainText+= (char) (rand+'A');
+    }
+    this.key=key;
+    keyMatrix=new Matrix(key);
+    hasKey=true;
+
+    if(Matrix.getDeterminant(keyMatrix.getMatrix())==13||Matrix.getDeterminant(keyMatrix.getMatrix()) ==2)
+    throw new IllegalArgumentException("Key is invalid. Please choose another key.");
+    }
+    public HillCipher(String cipherText)
+    {
+    this.cipherText=clean(cipherText);
+    cipherMatrix= new Matrix(this.cipherText);
+    hasKey=false;
+    }
+
+    public void encrypt()
+    { String[] plainTextToEncrypt = splitText(plainText);
+
+    for (String s : plainTextToEncrypt) {
+    Matrix Encrypted = Matrix.multiplyMatrix(keyMatrix, new Matrix(s, 1));
+    for (int i = 0; i < 3; i++) {
+    cipherText += (char) (Encrypted.getMatrix()[i][0] + 'A');
+    }
+    }
+
+    }
+    public void decrypt()
+    {String[] CipherTextToDecrypt = splitText(cipherText);
+
+    for (String s : CipherTextToDecrypt) {
+    Matrix inverse = keyMatrix.Inverse();
+    Matrix Encrypted = Matrix.multiplyMatrix(inverse, new Matrix(s, 1));
+    for (int i = 0; i < 3; i++) {
+    plainText += (char) (Encrypted.getMatrix()[i][0] + 'A');
+    }
+    }
+
+    }
+
+
+    public static String[] splitText(String ciphertext) {
+    String[] subtexts = new String[ciphertext.length()/3];
+    Arrays.fill(subtexts, "");
+    int c=0;
+
+    for (int i = 0; i < ciphertext.length(); i+=3) {
+    if(c>subtexts.length)
+    break;
+    subtexts[c++] += ciphertext.substring(i,i+3);
+    }
+
+    return subtexts;
+
+
+    }
+
+    public void inputHint(String inCode, String inPlainEnglish)
+    {   if(!hasKey) {
+    Matrix toInvert = new Matrix(inPlainEnglish);
+    toInvert = toInvert.Inverse();
+    Matrix plainEnglish = new Matrix(inCode);
+    keyMatrix=Matrix.multiplyMatrix(plainEnglish,toInvert);
+    }}
+    public String getKey()
+    {
+    String s="";
+    if(hasKey)
+    {
+    return key;
+    }
+    else if (keyMatrix==null)
+    {
+    throw new RuntimeException("No Key calculated, please input a hint.");
+    }
+    else
+    {
+    for(int row=0; row&lt; keyMatrix.getMatrix &#40; &#41; .length;row++)
+    {
+    for(int column=0; column&lt;keyMatrix.getMatrix()[row].length; column++)
+    {
+    s+=(char)(keyMatrix.getMatrix()[row][column]+'A');
+    }
+    }
+    return s;
+    }
+
+    }
+    public void setKey(String key)
+    {
+    this.key=key;
+    keyMatrix=new Matrix(key);
+    }
+
+
+    public String getCipherText() {
+    return cipherText;
+    }</pre></code>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* 
+This is a .css file so view this in your code editor.  You won't get syntax highlighting viewing this in a browser.
+
+This example highlights important CSS sytax concepts.
+*/
+
+/************************************************************************* 
+SYNTAX HIGHLIGHTING is your friend. 
+Your text editor should help you detect the typo below.
+It should be a different color than the two properties which are spelled correctly.
+
+A browser will simply ignore style properties it doesn't understand, like the 20pt font below. 
+If some of your styles don't show up in the page, it's often a syntax error.  
+*/
+
+body {
+  color: #333399;
+  font-family: "Geneva";
+  font-siz: 20pt;
+}
+
+
+/************************************************************************* 
+UNITS ARE REQUIRED in CSS.  
+In HTML, width="200" means pixels, but CSS requires units for ALL values.  
+*/
+
+font-size: 16pt;  
+font-size: 110%;    /* percentage relative to base font */
+font-size: 1.1em;   /* very similar to percentage  - EM is size of capital M in base font */
+margin: 5px;
+
+font-size: 16;  /* ERROR - wont work - needs units */
+margin: 5;      /* ERROR - wont work - needs units */
+margin: 5 px;   /* ERROR - wont work because of space */
+
+
+/************************************************************************* 
+SPACE and INDENTATIONS are for Humans.
+The following are all OK, but human readiblity is important so the first one is frowned upon.
+Coding style is a matter of personal preference, but consistency is important.
+*/
+
+body{color:#333399;font-family:"Geneva";font-size:20pt;}
+
+body { 
+  color:#333399;
+  font-family:"Geneva";
+  font-size:20pt;
+}
+
+body { 
+  color : #333399 ;
+  font-family : "Geneva" ;
+  font-size : 20pt ;
+}
+
+body { 
+  color: #333399;
+  font-family: "Geneva";
+  font-size: 20pt;
+}
+
+body 
+{ 
+  color: #333399;
+  font-family: "Geneva";
+  font-size: 20pt;
+}
+
+
+/************************************************************************* 
+STYLE CLASS NAMES ARE CASE SENSITIVE.
+For example, if you have 
+
+div.Fred { ... } 
+
+in your Style Sheet but 
+
+<div class="fred"></div> 
+
+in your HTML code, the style class will not be applied. 
+*/
+
+
+/************************************************************************* 
+CONSISENT CODING HABITS can help you to recognize syntax errors.
+The following has two syntax errors.  Can you spot them?
+*/
+
+body { 
+  color #333399;
+  font-family: "Geneva"
+  font-size: 20pt;
+}
+
+
+/************************************************************************* 
+MULTI WORD FONTS NEED QUOTES
+But it never hurts to also quote single word font names (see first example at top). 
+*/
+
+body { 
+  font-family: "Comic Sans MS";
+}
+
+
+

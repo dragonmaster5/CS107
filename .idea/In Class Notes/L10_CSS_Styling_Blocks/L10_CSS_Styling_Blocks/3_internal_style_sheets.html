@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Internal Style Sheets</title>
+    
+    <!-- 
+      Below is an HTML style container.
+      The browser reads the code inside the style container as pure CSS - not HTML.
+    -->
+    
+    <style>
+      
+      div.fancy  {
+         border:  2px dotted #000066;  
+         padding: 5px;
+      } 
+      
+      /* Just CSS selectors.  NO HTML inside the style container. */
+      
+    </style>
+        
+  </head>
+  <body>
+    An <b>Internal Style Sheet</b> ONLY appllies to that page. 
+    They are usually placed in the HTML head section, but they don't have to be. 
+    <br>
+    You need to see the source code to see how that works.
+    
+    <br><br>
+    
+    <div class="fancy">
+      Internal style sheets are best for styles that will only apply to one page.
+      For example, if you want to use this style of block in multiple Web pages,
+      then you would have to copy the same Internal Style Sheet into all those pages. 
+      That creates redundancy which makes it harder to maintain uniformity among pages.
+      
+      <br><br>
+      
+      In Computer Science, any time redundancy occurs in the code, there is usually a better way to do it. 
+      If this style block was needed in multiple pages, it would be 
+      better to put the styles into an external style sheet that all those pages import.  
+      That way, a single CSS selector would control all the blocks across multiple pages.
+    </div>
+
+    
+  </body>
+</html>

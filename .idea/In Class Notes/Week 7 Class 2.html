@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 7 Class 2</title>
+    <style>
+        .border_thin{border: 1px solid #000000}
+        p.fixed_dimensions{
+            padding:5px;
+            width:700px;
+            height: 300px;
+        }
+        div.box_model_styles{ /*Depreciated*/
+            width: 5px 10px 5px 10px;
+
+        }
+        p.center_text /* This class centers the text shown here.*/
+        {
+            text-align:center;
+        }
+        p.equal_side_margins {
+            padding: 5px;
+            margin: 0px 200px 0px 200px;
+
+
+        }
+        p.auto_margins{
+            padding: 5px;
+            width: 400px;
+            margin: auto;
+        }
+        div.curved_banner{
+            padding:10px;
+            background-color:grey;
+            font-weight:bold;
+            border-radius:25px;
+        }
+    </style>
+</head>
+<body>
+ <div class="border_thin">The content of this block determines its height. <br><br> Take the line breaks out and it will shrink vertically as much as it can.</div>
+<p class="center_text border_thin"> This is a centered paragraph block</p>
+
+<div class="curved_banner"> This is a curved banner</div>
+<div style="color:#999999; font-size: 12pt; font-family: 'Geneva'; ">1234 Sunset Ave <br> Columbus, OH, 12345 <br>
+(123) 123-4567</div> /* This class centers the text shown here.*/
+</body>
+</html>

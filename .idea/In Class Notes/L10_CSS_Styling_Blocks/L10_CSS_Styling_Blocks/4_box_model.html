@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS Box Model</title>
+    
+    <style>
+    
+      /* Using Internal Style Sheet to keep this example in one file. */
+      
+      .border_thin {
+         border: 1px solid #000000;   
+      } 
+      
+      div.box_model_styles {
+        padding: 10px 5px 10px 5px;      /* TRBL notation */
+        margin: 3px 15px 3px 15px;       /* TRBL notation */
+        border: 1px solid #000000;      
+      } 
+      
+      /* 
+      The first one above is a Generic Style Class, meaning it can be applied to ANY HTML element. 
+      A generic class can be called on different HTML elements as shown in this example.
+      
+      The second one above is an Element-Specific Style Class that can ONLY be applied to a div block.
+      */
+      
+    </style>
+        
+  </head>
+  <body>
+    The <a href="http://www.w3schools.com/css/css_boxmodel.asp" target="_blank">CSS Box Model</a> explains the main structural aspects of HTML block Elements.
+    
+    <br><br>
+    
+    <b>Most HTML blocks have default margins, but no default padding.</b>   
+    <br>
+    No margin or padding styles have been applied to the Paragraph (P) and Section Heading (h1, h2, ...) blocks below.
+    <br>
+    You can see that there is no padding between the text in the "content" parts of the blocks and the borders.
+    <br>
+    But you can clearly see the top/bottom margins of the blocks.
+    There are no line breaks between the blocks in the HTML code.  
+    The vertical spacing is entirely created by the default top/bottom margins. 
+   
+    <br>
+    
+    <p class="border_thin">
+      Default Paragraph Block (with only border added by CSS)
+    </p>
+    <p class="border_thin">
+       Default Paragraph Block (with only border added by CSS)
+    </p>
+    <h3 class="border_thin">
+       Default Section Header Block (with only border added by CSS)
+    </h3>
+    <h3 class="border_thin">
+       Default Section Header Block (with only border added by CSS)
+    </h3>
+    
+    <br>
+    <b>Div blocks have no default margins or padding</b>, as you can see below.
+    <br>
+    Notice how the two div blocks below stack on top of each other with no space in between. 
+    
+    <br><br>
+    
+    <div class="border_thin">
+      Default Div Block (with only border added by CSS)
+    </div>
+    <div class="border_thin">
+      Default Div Block (with only border added by CSS)
+    </div>
+    
+    <br>
+    
+    The following div blocks have styles applied to change the defaults.
+    <br>
+    In particular, the padding keeps the content away from the borders. 
+    
+    <br><br>
+    
+    <div class="box_model_styles">
+      Div Block with Box Model Styles: padding, border, and margins.
+    </div>
+    <div class="box_model_styles">
+      Div Block with Box Model Styles: padding, border, and margins.
+    </div> 
+    
+       
+  </body>
+</html>

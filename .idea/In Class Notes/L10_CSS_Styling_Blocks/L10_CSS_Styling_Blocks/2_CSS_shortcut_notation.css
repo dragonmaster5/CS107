@@ -1,0 +1,68 @@
+/* 
+This is a .css file so view this in your code editor.  You won't get syntax highlighting viewing this in a browser.
+
+This example shows some common Shortcut Notations used in CSS.
+*/
+
+/************************************************************************* 
+BORDER SHORTCUT NOTATION is usually preferred over the longer form.
+The two fred Class Selectors result in EXACTLY the same styles. 
+*/
+
+div.fred {
+  border:  1px dotted #000000;   
+}
+
+div.fred {
+  border-width: 1px;
+  border-style: dotted;
+  border-color: #000000;
+}
+
+
+/************************************************************************* 
+MARGIN and PADDING shortcut notations work exactly the same way.
+The examples below use only MARGIN for convenience.  
+*/
+
+div.homer {
+  margin: 3px;               /* all margins the same */
+}
+
+div.lisa {
+  margin: 3px 4px;           /*  T&B  L&R  */
+}
+
+div.bart {
+  margin: 3px 4px 5px 6px;   /* T R B L (Top Right Bottom Left - clockwise) */
+}
+
+div.bart {                   /* T R B L is shortcut notation for these properties */ 
+  margin-top: 3px;
+  margin-right: 4px;
+  margin-bottom: 5px; 
+  margin-left: 6px;   
+}
+
+
+/************************************************************************* 
+CERTAIN RGB COLORS have shortcut notation.
+The first 2 body selectors below apply the same colors. 
+The 2nd one uses shortcut notation for repeating digits.
+
+Shortcut color notation only works for about 4,000 out of almost 17 million RGB colors, so it's only of limited usefulness.
+*/
+
+body { 
+  color: #3333CC;
+  background-color: #88EEAA;
+}
+   
+body { 
+  color: #33C;
+  background-color: #8EA;
+}
+ 
+body { 
+  color: #A1CC43;   /* Like this one, most colors can't be shortened */
+}

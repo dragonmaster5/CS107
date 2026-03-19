@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Styling Blocks</title>
+    
+    <style>
+      
+      /* Some generic utility classes that can be called on any element. */
+      
+      .border_thin  {
+         border:  2px solid #000000;   
+      } 
+      
+      .center_text  {
+         text-align: center;   
+      } 
+      
+      /* The main classes that style the blocks in this example. */
+      
+      div.stripe {
+        padding: 5px;
+        background-color: #DDDDDD;
+      }
+      
+      div.banner {
+        padding: 5px;
+        margin: auto;
+        width: 75%;
+        background-color: #DDDDDD;
+        font-weight:bold;
+      }
+      
+      div.curved_corners {
+        border-radius: 10px;    
+      }
+      
+      div.curved_stripe {
+        padding: 10px;
+        background-color: #DDDDDD;
+        border-radius: 25px;  
+      }
+      
+      div.drop_shadow {
+        padding: 10px;
+        background-color: #DDDDDD;
+        box-shadow: 3px 6px 10px #999999;
+        
+        /* 
+          The box-shadow values (in order): 
+          right shadow thickness - bottom shadow thickness - shadow fade gradient - shadow color
+        */
+      }
+      
+      div.display_box_top  {
+        font-weight: bold;
+        color: #FFFFFF;
+        background-color: #999999;   
+        padding: 5px;              
+      } 
+      
+      div.display_box_bottom  {
+         background-color: #DDDDDD;   
+         border:  2px solid #999999;   
+         padding: 10px;                 
+      } 
+      
+      div.curved_banner {
+        padding: 10px;
+        background-color: #DDDDDD;
+        font-weight:bold;
+        border-radius: 25px;
+      }
+      
+      div.flying_saucer_banner {
+        padding: 10px;
+        background-color: #DDDDDD;
+        font-weight:bold;
+        border-radius: 75%;
+      }
+      
+      div.marquis_banner {
+        padding: 10px;
+        background-color: #DDDDDD;
+        font-weight:bold;
+        
+        border-top-left-radius: 5px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 50px;
+      }
+      
+      div.marquis_banner_small {
+        padding: 10px;
+        background-color: #DDDDDD;
+        font-weight:bold;
+        
+        width: 400px;   /* restrict width and center it */
+        margin: auto;   
+      
+        border-radius: 5px 50px 5px 50px;   /* TRBL shortcut for long property names just above */
+      }
+     
+    </style>
+        
+  </head>
+  <body>
+    This example shows several additional ways to style blocks.
+    
+    <br><br>
+    
+    <div class="stripe">
+      This is a stripe - just a block with a background color. 
+    </div>
+    
+    <br><br>
+    
+    <div class="banner center_text  border_thin">
+      This block is like a centered "banner" that's 75% of the width of the browser window.
+    </div>
+    
+    <br><br>
+    
+    <div class="curved_corners  border_thin">
+      This block uses the <i>border-radius</i> CSS property.  
+      The curved corners are encroaching on the block contents since there is no padding. 
+    </div>
+    
+    <br><br>
+    
+    <div class="curved_stripe">
+      Stripe with curved corners.
+    </div>
+    
+    <br><br>
+    
+    <div class="drop_shadow">
+      Drop Shadow
+    </div>
+    
+    <br><br>
+    
+    <div class="display_box_top  center_text">
+      Display Box Caption
+    </div>
+    <div class="display_box_bottom">
+      Content area of Display Box.  This display box looks like one unified structure.  But it's really just two DIV blocks stacked on top of each other.  Since DIV blocks have no margins by default, they stack with no seams in between.   It's made to look like one strucure since the border of the bottom block matches the background color of the top block. 
+    </div>
+    
+    <br><br>
+    
+    
+    <div class="curved_banner  center_text  border_thin">
+      Rounded Corner Banner 
+    </div>
+    
+    <br><br>
+    
+    <div class="flying_saucer_banner center_text">
+      Flying Saucer Banner 
+    </div>
+    
+    <br><br>
+    
+    <div class="marquis_banner center_text">
+      Marquis Banner 
+    </div>
+    
+    <p style="color:red;">
+      <!-- 
+        Note the use of inline styles (lowest level of cascade) - just a "tweak" to color the text red (important note). 
+        Beyond ocassionly tweaking something small, it's best to limit use of inline styles because they are not versatile. 
+      -->
+      
+      Obviously, the smaller, centered Marquis Banner below looks "cooler" than the full-width one above. The reason the examples in this page are mostly full-width rather than smaller/centered is because that makes the blocks more versatile.  Upcoming lessons will show how to create elaborate Web page layouts using columns, etc.  Remember, the default behavior of blocks is to expand horizontally as much as possible.  So when you put a block inside a column, it will expand horizontally ONLY as much as the width of the column will let it.  So you could put one of the above full-width blocks into three different columns of different widths, and the three blocks will have different widths even though they have the EXACT same styles applied. 
+      
+      <br><br>
+      
+      When you first learn how to style blocks (like in this lesson), it's tempting to try to make them look as cool as possible (smaller/centered).  However, for the Homework in this Lesson, it's best just to create full-width blocks.  That way, when you start using columns, you will be able to place your blocks into columns and they will automatically adapt to the column widths.   
+    <p>
+    
+    <div class=" marquis_banner_small center_text">
+      Small Marquis Banner 
+    </div>
+    
+    <br><br>
+    
+    
+
+  </body>
+</html>

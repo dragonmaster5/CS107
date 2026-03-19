@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>About Blocks</title>
+    
+    <style>
+      
+      /* Using Internal Style Sheet to keep this example in one file. */
+      
+      .border_thin  {
+         border:  1px solid #000000;
+      } 
+      
+      p.fixed_dimensions {
+        padding: 5px;
+        width: 700px;
+        height: 300px;
+      }
+      
+    </style>
+        
+  </head>
+  <body>
+    HTML block elements adjust very differently to horizontal and vertical space.  
+    <br>
+    The reason is that vertical space is basically content-driven, whereas horizontal space is 
+    more related to page layout (e.g. browser window width, column width, etc).
+    
+    <br><br>
+    
+    <b>Blocks expand horizontally as much as possible.</b>
+    <p class="border_thin">
+      Experiment by dragging your browser window by its lower right corner to change its width.
+      <br>
+      Notice that all the blocks automatically expand/contract to fill the horizontal space available to them.
+    </p>
+    
+    
+    The vertical behavior of blocks is completely different. 
+    <br>
+    <b>Blocks shrink vertically down to the minimum required by the block's content. </b>
+    
+    <br><br>
+    
+    <div class="border_thin">
+      This content of this block determines it's height.
+      <br><br>
+      Take the line breaks out, and it will shrink vertically as much as it can. 
+    </div>
+    
+    <br>
+    
+    The block below has no contents so it collapses vertically down to nothing but borders, 
+    but stil expands horizontally as much as it can. 
+    
+    <br><br>
+    
+    <div class="border_thin"></div>
+    
+    <br>
+    
+    <p class="fixed_dimensions  border_thin">
+      This block has fixed dimensions because its <b>width</b> and <b>height</b> are set in the CSS. 
+      <br>
+      Setting its <b>width</b> means it doesn't expand horizontally as blocks normally do.  
+      <br>
+      Setting its <b>height</b> means it doesn't collapse vertically as blocks normally do.  
+      
+      <br><br>
+      
+      According to the CSS Box Model, width and height set the dimensions of the content area only.  
+      Any padding, border, or margins is applied outside of that.  For example, if the width is 700px,
+      then the actual horizontal space the block takes up in the page is 700px plus any left/right padding/border/margin.
+    </p>
+    
+    <!--  
+      Notice that 2 style classes are called for the block above.  
+      In that case, the styles from both classes are applied to the element.  
+      
+      The border_thin class is a generic "Utility Class" so a border can easily be applied to any element. 
+      The fixed_dimension class is a more substantive class to create a unique page element. 
+      
+      Using simple "Utility Classes" in this way can be very handy to augment other other classes. 
+    -->
+    
+  </body>
+</html>

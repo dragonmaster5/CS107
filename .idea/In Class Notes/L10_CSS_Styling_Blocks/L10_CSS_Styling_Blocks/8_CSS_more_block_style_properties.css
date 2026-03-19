@@ -1,0 +1,55 @@
+/* 
+This Example summarizes some of the nuances of shortcut notations for Block styles. 
+
+You have seen that supplying one value for the following style properties puts uniform styles on ALL sides of a block. 
+*/
+
+padding: 5px;
+margin: 5px;
+border-radius: 25px;
+
+/*
+Previous examples have shown in detail how TRBL shortcut notation works for padding and margins.
+It works similarly for border-radius.  It still goes counter-clockwise, but starts from the top left corner.
+So it's actually TL TR BR BL as shown below. 
+*/
+
+border-radius: 5px 10px 15px 20px;  /* Shortcut for the individual style properties below  */  
+
+border-top-left-radius: 5px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius:  20px;
+
+/*
+But border works bit different.
+*/
+
+border: 1px solid #000000;  /* Shortcut for the individual style  properties below  */  
+
+border-width: 1px; 
+border-style: solid; 
+border-color: #000000; 
+
+/*
+To control the borders individually, it's easiest do the following. 
+*/
+
+border-top: 1px solid #000000;
+border-right: 2px dotted #000033;
+border-bottom: 3px dashed #000066;
+border-left: 4px groove #000099;
+
+/*
+But the following is equivalent to just above, just perhaps more complicated.
+*/
+
+border-width: 1px 2px 3px 4px;                    /* TRBL */
+border-style: solid dotted dashed groove;         /* TRBL */
+border-color: #000000 #000033 #000066 #000099;    /* TRBL */
+
+
+
+
+
+

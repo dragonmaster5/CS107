@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Centering Blocks</title>
+    
+    <style>
+    
+      /* Using Internal Style Sheet to keep this example in one file. */
+     
+      .border_thin  {           /* Generic Style class can apply to any HTML element. */
+         border:  1px solid #000000;   
+      } 
+      
+      p.center_text  {
+        text-align: center;    /* Does NOT center blocks, only text inside blocks. */  
+      } 
+      
+      p.equal_side_margins {
+        padding: 5px;
+        margin: 0px 200px 0px 200px;   /* TRBL */
+      }
+      
+      p.auto_margins {
+        padding: 5px;
+        width: 800px;
+        margin: 20px auto 20px auto;   /* TRBL */
+      }
+      
+      /*
+      Also recall the T&B  L&R shortcut notation. So the following would be same as above.
+      
+      margin: 20px auto;    
+      
+      Or you could even do it without shortcut notation.
+      
+      margin-top: 20px;
+      margin-right: auto;
+      margin-bottom: 20px;
+      margin-left: auto;
+      */  
+      
+    </style>
+        
+  </head>
+  <body>
+    
+    <p class="center_text">
+      The CSS for this block has <b>text-align</b> set to <b>center</b>. 
+      <br>
+      It looks like that might be centering this block. But it's not. 
+    </p>
+    
+    <!--  
+      If you are curious about the use of two style classes in some elements below, 
+      see the comment at the end of the last example!
+    -->
+    
+    <p class="center_text  border_thin">
+      When the block is given borders, you can see it's only centering the content within the block.
+      <br>
+      Indeed, the CSS property is named <b>text-align</b>.  It's not meant for aligning the blocks themselves.  
+    </p>
+    
+    <p class="equal_side_margins  border_thin">
+      This block is centered by giving it equal left/right margins that are quite large. 
+      <br>
+      Blocks expand horizontally as much as possible, but that expansion is limited by a block's margins. 
+      <br>
+      That means the width of the block is determined by the browser window width, minus the left/right margins.
+    </p>
+    
+    <p class="auto_margins  border_thin">
+      In many cases, it's desirable to specify the block's width in the CSS and also center it.  
+      In that case, you can't determine how big the left/right margins should be since you don't know how wide
+      the browser window will be.
+      <br><br>
+      The solution is to set the left/right <b>margin</b> to the value of <b>auto</b> in the CSS. 
+      The browser <b>auto</b>matically calculates the left and right margins to be equal, thereby centering the block.
+      <br><br>
+      Resize the browser window (try it) and the margins are automatically recalculated to keep it centered. 
+      <br>
+      The first centered block above stays centered because the browser changes the block width based on the width of the browser window.
+    </p>
+    
+    <p class="border_thin">
+      <br><br>  
+      
+      There is no easy way to vertically center content inside blocks using CSS.  
+      In most cases, you don't even need to since vertical space is in Web pages is usually content driven.
+      <br><br>
+      There are few CSS tricks you can use to vertically center content, but that's beyond the scope of this lesson.
+      But you can simulate vertical centering by adding line breaks before and after the block content like in this block
+      
+      <br><br><br>
+    </p>
+    
+  </body>
+</html>

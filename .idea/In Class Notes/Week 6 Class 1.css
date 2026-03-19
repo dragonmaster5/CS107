@@ -1,0 +1,12 @@
+body{
+    border: 3px solid #000000;
+    padding : 3px;
+}
+span{ /* Generic Inline container*/
+    border:2px dotted #009900;
+    margin : 3px;
+}
+div{ /* Generic block container*/
+    border :2px dotted #990000;
+    margin: 3px;
+}

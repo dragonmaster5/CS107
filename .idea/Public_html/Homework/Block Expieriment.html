@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experimenting with Blocks</title>
+    <style>
+        div.shortcut{
+        border : 1px solid #000;
+            padding : 25px;
+            margin: 40px auto;
+        }
+        div.OnlyBottomBorder{
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 10px solid #000;
+
+
+        }
+        div.roundedCorners{
+            border : 1px solid #000;
+            background-color: #3b0101;
+            border-radius: 10px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        div.display_box_top  {
+            font-weight: bold;
+            color: #FFFFFF;
+            background-color: #3b0101;
+            padding: 5px;
+        }
+
+        div.display_box_bottom  {
+            background-color: #3b0101;
+            border:  2px solid #750404;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+    <link href="../Style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class ="shortcut">lorem ipsum</div>
+<br>
+<div class = "OnlyBottomBorder"></div>
+<br>
+<div class="roundedCorners">Rounded Centered Block</div>
+
+<div class="display_box_top  center_text">
+    Display Box Caption
+</div>
+<div class="display_box_bottom">
+    Content area of Display Box.
+</div>
+<a href="../index.html"> <span class="links">Return Home</span> </a>
+</body>
+</html>

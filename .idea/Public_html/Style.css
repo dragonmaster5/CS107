@@ -1,0 +1,93 @@
+/*
+Style Guide:
+Header colors = #ffffff
+main background color = #3d3d3d;
+link color = #0cedde
+Link block color 1 = #3b0101
+link block2 color =#4f4e4e
+
+*/
+
+
+body{
+    background-color: #3d3d3d;
+    font-family: Verdana;
+    color: #ffffff;
+}
+h1{
+    border : #ffffff 4px solid;
+    text-align: center;
+}
+h2{
+    border: #ffffff 2px solid;
+    text-align: center;
+}
+h3{
+    border: #ffffff 2px solid;
+    text-align: center;
+}
+
+span.tinyText{
+    font-family: Verdana;
+    font-size: 15px;
+}
+span.links{
+    color: #0cedde;
+    text-decoration: underline  #0cedde;
+}
+
+span.links:visited{
+    color: #0ced;
+}
+span.links:hover{
+    color: #324ea8
+}
+div.linkBlock{
+    background-color: #3b0101;
+    color: #ffffff;
+    font-family: Verdana;
+    font-size: 15px;
+    border :#750404 7px solid;
+
+}
+div.linkBlock2{
+    background-color: #4f4e4e;
+    color: #ffffff;
+}
+span.underline{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.button-link {
+    /* Visual styling */
+    background-color: #007bff; /* Button color */
+    color: #ffffff; /* Text color */
+    padding: 10px 20px; /* Space inside the button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove default link underline */
+    display: inline-block; /* Allows margin/padding and fits width to content */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+
+    /* Optional: Add hover effect for interactivity */
+    transition: background-color 0.3s; /* Smooth color transition */
+}
+
+.button-link:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+.clear_float{
+    clear:both;
+}
+div.floated_left{ float: left; /* you must use .clearfloat after you use a floating element */
+width:100px; height:70px;
+margin:auto;
+padding:5px;
+border:  1px solid #000000;
+font-weight :bold;}
+div.floated_right{ float: right; /* you must use .clearfloat after you use a floating element */
+    width:100px; height:70px;
+    margin:auto;
+    padding:5px;
+    border:  1px solid #000000;
+    font-weight :bold;}

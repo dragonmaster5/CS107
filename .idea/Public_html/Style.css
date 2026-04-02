@@ -104,3 +104,25 @@ div.navbar li {
     text-align: center;
     float:left;
 }
+#page_footer {
+    width: 1000px;
+    height: 100px;
+    padding: 5px;
+    margin: 0px auto 0px auto;  /* centers block*/
+}
+
+div.display_box_top  {
+    font-weight: bold;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+div.display_box_bottom  {
+    border:  2px solid #ffffff;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px 10px 10px 10px;
+}

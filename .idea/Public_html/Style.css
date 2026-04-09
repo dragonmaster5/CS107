@@ -10,7 +10,7 @@ link block2 color =#4f4e4e
 
 
 body{
-    background-color: #3d3d3d;
+    background-image: url("Images/faded_gallery-OfdOEdGYiuk-unsplash.jpg");
     font-family: Verdana;
     color: #ffffff;
 }
@@ -114,9 +114,7 @@ div.navbar li {
 div.display_box_top  {
     font-weight: bold;
     color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    padding: 5px;
+    padding: 2px;
 }
 
 div.display_box_bottom  {
@@ -124,5 +122,5 @@ div.display_box_bottom  {
     display: flex;
     align-items: center;
     color: white;
-    padding: 10px 10px 10px 10px;
+    padding: 3px 3px 4px 3px;
 }

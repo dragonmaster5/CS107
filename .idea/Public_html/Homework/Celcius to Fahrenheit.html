@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Homework 12</title>
-    <script>
-        userTemp=prompt("What is the temperature in Celcius");
-         F = userTemp * (9/5) + 32
-        document.write(F)
-    </script>
 </head>
 <body>
 
+<div id="OutputBlock"> </div>
 </body>
+
+<script>
+    const userTemp = parseFloat(prompt("What is the temperature outside?"))
+    const inputString =`The temperature inputted by the user is: ${userTemp} C <br>`;
+    const convertedTemp= userTemp * (9/5)+32;
+    const distanceToFreezing = convertedTemp - 32
+    const outputTemp= document.getElementById('OutputBlock');
+    const outputString =`The converted temperature is ${convertedTemp.toFixed(1)} F. <br> The distance to freezing is ${distanceToFreezing.toFixed(1)} F.`;
+    outputTemp.innerHTML=inputString + outputString;
+</script>
 </html>

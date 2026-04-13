@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
-        document.write(3>4);
+        const score = parseFloat(prompt("What is the score?"));
+        if(score>=60)
+        {
+            document.write(`${score} is a passing score.`)
+        }
+        else if (score<60)
+        {
+            document.write(`${score} is a failing score.`)
+        }
 
     </script>
 </head>
